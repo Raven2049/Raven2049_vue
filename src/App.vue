@@ -1,25 +1,22 @@
 <template>
   <div id="app">
-    <header></header>
+    <top />
+    <sideMenu />
     <router-view />
+    <bottom />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import header from '@/components/head.vue'
+import top from '@/components/top.vue'
+import bottom from '@/components/bottom.vue'
+import sideMenu from '@/components/side-menu.vue'
 
 @Component({
-  components: { header }
+  components: { top, bottom, sideMenu }
 })
 export default class Home extends Vue {}
 </script>
 
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-</style>
+<style lang="stylus"></style>

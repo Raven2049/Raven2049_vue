@@ -39,7 +39,8 @@ module.exports = {
   // CSS related options
   css: {
     // extract CSS in components into a single CSS file (only in production)
-    extract: true,
+    // 与css热重载不兼容，开发环境下设置成false
+    extract: false,
 
     // enable CSS source maps?
     sourceMap: false,

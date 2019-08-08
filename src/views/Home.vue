@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <div class="container"></div>
   </div>
 </template>
 
@@ -11,3 +11,8 @@ import { Component, Vue } from 'vue-property-decorator'
 })
 export default class Home extends Vue {}
 </script>
+<style lang="stylus" scoped>
+.container
+  height 100vh
+  background-color #cc9ab5
+</style>
