@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <header></header>
+    <Top></Top>
   </div>
 </template>
 <script>
-import header from '../src/components/common/header.vue'
+import Top from '@/components/header.vue'
 export default {
   components: {
-    header
+    Top
   }
 }
 </script>
