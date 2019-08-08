@@ -1,15 +1,18 @@
 <template>
-<div id="app">
-  <head></head>
-  <router-view />
-</div>
+  <div id="app">
+    <header></header>
+    <router-view />
+  </div>
 </template>
-<script>
-import head from '@/components/common/head.vue'
 
-export default {
-  components: {}
-}
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import header from '@/components/head.vue'
+
+@Component({
+  components: { header }
+})
+export default class Home extends Vue {}
 </script>
 
 <style lang="stylus">
