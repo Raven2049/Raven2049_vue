@@ -13,6 +13,5 @@ export default class Home extends Vue {}
 </script>
 <style lang="stylus" scoped>
 .container
-  height 100vh
   background-color #cc9ab5
 </style>

@@ -15,4 +15,5 @@ export default {}
   width 100%
   background-color #776ea7
   // background linear-gradient(to bottom, #9f9f9f, #999)
+  margin-top 20px
 </style>
