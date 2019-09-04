@@ -17,15 +17,15 @@ export default {
     }
   },
   methods: {
-    timeout (): void {
-      console.log(this.time)
+    timeout (): any {
       window.setInterval(() => {
-        setTimeout(this.time++, 0)
+        setTimeout(() => {
+          this.time++
+        }, 0)
       }, 1000)
     }
   },
-  mounted (): void {
-    console.log(this.time)
+  mounted (): any {
     this.timeout()
   }
 }
