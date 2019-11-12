@@ -43,7 +43,8 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-shadow': 'off',
     'no-bitwise': 'off',
-    'no-console': 'off'
+    'no-console': 'off',
+    'space-before-function-paren': 0
   },
   parserOptions: {
     parser: '@typescript-eslint/parser'

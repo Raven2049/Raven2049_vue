@@ -4,37 +4,38 @@
     <span class="tab">
       <span>首页</span>
       <span>我是？</span>
-      <span>{{time}}</span>
+      <span class="fdsf">{{time}}</span>
     </span>
   </div>
 </template>
 
 <script lang='ts'>
 export default {
-  data () {
+  data() {
     return {
       time: 0
     }
   },
   methods: {
-    timeout (): any {
+    timeout() {
       window.setInterval(() => {
         setTimeout(() => {
-          this.time++
+          ;(this as any).time++
         }, 0)
       }, 1000)
     }
   },
-  mounted (): any {
-    this.timeout()
+  mounted(): any {
+    ;(this as any).timeout()
   }
 }
 </script>
 
-<style lang='stylus' scoped>
-.top
-  height 60px
-  width 100%
-  background-color #776ea7
-  // background linear-gradient(to bottom, #999, #9f9f9f)
+<style lang='css' scoped>
+.top {
+  height: 60px;
+  width: 100%;
+  background-color: #776ea7;
+  background: linear-gradient(to bottom, #999, #9f9f9f);
+}
 </style>
