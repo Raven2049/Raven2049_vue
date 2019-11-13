@@ -20,13 +20,13 @@ export default {
     timeout() {
       window.setInterval(() => {
         setTimeout(() => {
-          ;(this as any).time++
+          (this as any).time++
         }, 0)
       }, 1000)
     }
   },
   mounted(): any {
-    ;(this as any).timeout()
+    (this as any).timeout()
   }
 }
 </script>
