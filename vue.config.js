@@ -14,7 +14,7 @@ module.exports = {
 
   // whether to use eslint-loader for lint on save.
   // 保存时是不是用eslint-loader 来lint 代码
-  lintOnSave: false,
+  lintOnSave: true,
 
   // use the full build with in-browser compiler?
   // https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
@@ -24,8 +24,8 @@ module.exports = {
   // tweak internal webpack configuration.
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   // webpack 配置~
-  chainWebpack: () => {},
-  configureWebpack: () => {},
+  chainWebpack: () => { },
+  configureWebpack: () => { },
 
   // vue-loader options
   // https://vue-loader.vuejs.org/en/options.html
@@ -81,7 +81,7 @@ module.exports = {
     hotOnly: false,
     // See https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md#configuring-proxy
     proxy: null, // string | Object
-    before: app => {}
+    before: app => { }
   },
 
   // options for 3rd party plugins

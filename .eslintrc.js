@@ -24,9 +24,9 @@ module.exports = {
         optionalDependencies: ['test/unit/index.js']
       }
     ],
+    'enforce': 'pre',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    semi: ['error', 'never'],
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
@@ -44,7 +44,9 @@ module.exports = {
     'no-shadow': 'off',
     'no-bitwise': 'off',
     'no-console': 'off',
-    'space-before-function-paren': 0
+    'space-before-function-paren': 0,
+    "semi": 'off',
+    'strict': 2,
   },
   parserOptions: {
     parser: '@typescript-eslint/parser'
