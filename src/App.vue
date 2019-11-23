@@ -13,9 +13,7 @@ import top from '@/components/top.vue'
 import bottom from '@/components/bottom.vue'
 import sideMenu from '@/components/side-menu.vue'
 
-@Component({
-  components: { top, bottom, sideMenu }
-})
+@Component({ components: { top, bottom, sideMenu } })
 export default class Home extends Vue {
   mounted() {}
 }

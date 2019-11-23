@@ -6,58 +6,35 @@
       <span>首页</span>
       <span>我是？</span>
       <span class="fdsf">{{time}}</span>
-      <button @click="change">221312</button>
-      <div class="test" v-if="status.display"></div>
     </span>
   </div>
 </template>
 
 <script lang='ts'>
 import { Vue, Emit, Component } from 'vue-property-decorator'
-@Component({
-  mounted() {
-    console.log((this as any).time)
-  }
-})
+@Component({})
 export default class Top extends Vue {
-  this = this as any
-  time: Number = 0
-  status: Object = { display: false }
+  time: number = 0
+  status: any = { display: false }
   @Emit()
   timeout() {
     window.setInterval(() => {
       setTimeout(() => {
-        ;(this as any).time++
+        this.time++
       }, 0)
     }, 1000)
   }
   change() {
-    ;(this as any).status.display = !(this as any).status.display
+    this.status.display = this.status.display
   }
   created() {
     this.timeout()
   }
+  mounted() {
+    console.log(this.status)
+    console.log(this.time)
+  }
 }
-// export default {
-//   data() {
-//     return {
-//       time: 3,
-//       status: { display: false }
-//     }
-//   },
-//   mounted() {
-//     window.setInterval(() => {
-//       setTimeout(() => {
-//         this.time++
-//       }, 0)
-//     }, 1000)
-//   },
-//   methods: {
-//     change() {
-//       this.status.display = !this.status.display
-//     }
-//   }
-// }
 </script>
 
 <style lang='css' scoped>
