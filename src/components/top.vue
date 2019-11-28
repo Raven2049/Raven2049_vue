@@ -30,10 +30,6 @@ export default class Top extends Vue {
   created() {
     this.timeout()
   }
-  mounted() {
-    console.log(this.status)
-    console.log(this.time)
-  }
 }
 </script>
 
