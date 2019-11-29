@@ -12,11 +12,7 @@
 
 <script lang='ts'>
 import { Vue, Emit, Component } from 'vue-property-decorator'
-@Component({
-  created() {
-    ;(this as any).timeout()
-  }
-})
+@Component({})
 export default class Top extends Vue {
   time: number = 0
   status: any = { display: false }
@@ -30,6 +26,9 @@ export default class Top extends Vue {
   }
   change() {
     this.status.display = this.status.display
+  }
+  created() {
+    this.timeout()
   }
 }
 </script>
