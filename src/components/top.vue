@@ -14,7 +14,7 @@
 import { Vue, Emit, Component } from 'vue-property-decorator'
 @Component({
   created() {
-    this.timeout()
+    ;(this as any).timeout()
   }
 })
 export default class Top extends Vue {
