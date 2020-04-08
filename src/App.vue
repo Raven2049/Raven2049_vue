@@ -1,19 +1,26 @@
+<!--
+ * @Description:
+ * @Company: BEPAL
+ * @Author: Raven
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-04-08 17:29:05
+ -->
 <template>
   <div id="app">
-    <top />
-    <sideMenu />
+    <Nav />
+    <SideMenu />
     <router-view />
-    <bottom />
+    <Bottom />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import top from '@/components/top.vue'
-import bottom from '@/components/bottom.vue'
-import sideMenu from '@/components/side-menu.vue'
+import Nav from '@/components/nav.vue'
+import Bottom from '@/components/bottom.vue'
+import SideMenu from '@/components/side-menu.vue'
 
-@Component({ components: { top, bottom, sideMenu } })
+@Component({ components: { Nav, Bottom, SideMenu } })
 export default class Home extends Vue {
   mounted() {}
 }

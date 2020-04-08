@@ -1,12 +1,19 @@
+<!--
+ * @Description:
+ * @Company: BEPAL
+ * @Author: Raven
+ * @LastEditors:
+ * @LastEditTime: 2020-04-08 15:18:01
+ -->
 <template>
   <div class="side-menu"></div>
 </template>
 
-<script lang='ts'>
-export default {}
+<script lang="ts">
+export default {};
 </script>
 
-<style lang='stylus' scoped>
+<style lang="stylus" scoped>
 .side-menu
   height 100%
   width 200px
