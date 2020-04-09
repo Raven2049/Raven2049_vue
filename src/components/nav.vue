@@ -3,12 +3,12 @@
  * @Company: BEPAL
  * @Author: Raven
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-04-08 17:16:09
+ * @LastEditTime: 2020-04-09 10:25:36
  -->
 
 <template>
   <div class="nav">
-    <div class="title">Raven'blog</div>
+    <div class="title">渡鸦妙妙屋</div>
     <div class="tab-container flex-middle flex-center">
       <div class="tab">主页</div>
       <div class="tab">导航</div>
@@ -78,6 +78,7 @@ export default class Nav extends Vue {
   .tab-container
     .tab
       margin-right 30px
+      font-size 16px
 .test
   height 300px
   background black
