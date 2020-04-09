@@ -45,6 +45,7 @@ module.exports = {
     "no-bitwise": "off",
     "no-console": "off",
     "space-before-function-paren": "off",
+    quotes: 0,
     semi: "off",
     strict: "error"
   },
