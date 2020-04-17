@@ -3,23 +3,30 @@
  * @Company: BEPAL
  * @Author: Raven
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-04-09 17:31:16
+ * @LastEditTime: 2020-04-17 17:08:38
  -->
 <template>
-  <div class="container">
-    <div v-for="(item,index) in dataList" :key="index">
-      <div>{{item.title}}</div>
+  <div>
+    <div class="container" v-for="(item,index) in dataList" :key="index">
+      <div class="title">{{item.title}}</div>
+      <div class="detail-info">
+        <span class="create-time">发布日期：{{item.createTime}}</span>
+        <span class="edit-time">最后编辑：{{item.editTime}}</span>
+        <span class="type">分类{{item.type}}</span>
+      </div>
+      <div class="abstract" v-html="item.abstract"></div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-interface itemType {
-  title?: string;
-}
-export interface dataType {
-  dataList?: Array<itemType>;
+export interface ItemType {
+  title: string;
+  createTime: string;
+  editTime: string;
+  type: string;
+  abstract: string;
 }
 @Component({
   components: {}
@@ -30,8 +37,28 @@ export default class ContentCard extends Vue {
     required: true,
     default: []
   })
-  dataList!: dataType;
+  dataList!: Array<ItemType>;
 }
 </script>
 
-<style></style>
+<style lang="stylus" scoped>
+.container
+  border-bottom 1px solid #eeeeee
+  padding-bottom 20px
+  margin-bottom 20px
+  .title
+    font-size 18px
+    font-weight bold
+    color #444
+    line-height 1.5
+  .detail-info
+    margin-bottom 20px
+    span
+      font-size 12px
+      color #777
+      margin-right 10px
+      line-height 12px
+  .abstract
+    font-size 15px
+    line-height 1.5
+</style>
