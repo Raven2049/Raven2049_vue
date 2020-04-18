@@ -3,7 +3,7 @@
  * @Company: BEPAL
  * @Author: Raven
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-04-17 17:14:58
+ * @LastEditTime: 2020-04-18 15:33:44
  -->
 <template>
   <div class="home">
@@ -62,7 +62,11 @@ export default class Home extends Vue {
       editTime: "2020/4/18"
     }
   ];
-  mounted() {}
+  mounted() {
+    fetch("https://www.baidu.com").then(res => {
+      console.log(res);
+    });
+  }
 }
 </script>
 <style lang="stylus" scoped>
